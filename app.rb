@@ -1,16 +1,17 @@
+# frozen_string_literal: true
+
 require 'json'
-require "sinatra"
-require "sinatra/reloader"
+require 'sinatra'
+require 'sinatra/reloader'
 require 'fast_jsonapi'
 require 'byebug'
 
-require 'sinatra/activerecord' 
+require 'sinatra/activerecord'
 # this will load models only after requiring activerecord
 Dir[File.join('.', 'app', '**', '*.rb')].sort.each { |f| require f }
 
 module Ads
   class App < Sinatra::Base
-
     configure do
       register Sinatra::Reloader
       register Sinatra::ActiveRecordExtension
@@ -24,10 +25,9 @@ module Ads
       serializer.serialized_json
     end
 
-
-    post '/ads' do        
+    post '/ads' do
       result = Ad.create!(ad_params)
-  
+
       if result.errors.any?
         422
       else
@@ -38,6 +38,5 @@ module Ads
     end
 
     helpers PaginationLinks, Common
-    
   end
 end
