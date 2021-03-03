@@ -16,6 +16,6 @@ module PaginationLinks
   private
 
   def pagination_link(page:)
-    url_for(request.query_parameters.merge(only_path: true, page: page))
+    url_for(request.params.merge(only_path: true, page: page))
   end
 end
