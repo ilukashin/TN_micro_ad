@@ -8,8 +8,13 @@ gem 'sinatra'
 gem 'sinatra-reloader', '~> 1.0'
 gem 'thin'
 gem 'rake'
-gem 'kaminari'
+
+gem 'kaminari-sinatra'
+# dependencies for kaminari
+gem 'rails'
 
 gem 'sinatra-activerecord'
 gem 'pg'
 gem 'fast_jsonapi', '~> 1.5'
+
+gem 'byebug'
