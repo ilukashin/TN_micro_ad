@@ -7,8 +7,9 @@ git_source(:github) { |repo_name| "https://github.com/#{repo_name}" }
 gem 'rake'
 gem 'sinatra'
 gem 'sinatra-reloader', '~> 1.0'
-gem 'thin'
+gem 'puma'
 
+gem 'kaminari'
 gem 'kaminari-sinatra'
 # dependencies for kaminari
 gem 'rails'
