@@ -1,9 +1,7 @@
 # frozen_string_literal: true
 
-require 'rubygems'
-require 'bundler'
-Bundler.require
+require_relative 'config/environment'
 
-# run app
-require './app'
-run Ads::App
+map '/ad' do
+  run AdRoutes
+end

@@ -1,0 +1,10 @@
+ru:
+  model:
+    errors:
+      ad:
+        city:
+          blank: title translation missing
+        title:
+          blank: description translation missing
+        description:
+          blank: description cannot be empty

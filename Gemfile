@@ -4,18 +4,35 @@ source 'https://rubygems.org'
 
 git_source(:github) { |repo_name| "https://github.com/#{repo_name}" }
 
-gem 'rake'
-gem 'sinatra'
-gem 'sinatra-reloader', '~> 1.0'
+gem 'sinatra', require: 'sinatra/base'
+gem 'sinatra-contrib'
+
+gem 'config'
 gem 'puma'
 
-gem 'kaminari'
-gem 'kaminari-sinatra'
-# dependencies for kaminari
-gem 'rails'
-
-gem 'fast_jsonapi', '~> 1.5'
 gem 'pg'
-gem 'sinatra-activerecord'
+gem 'sequel'
 
-gem 'byebug'
+gem 'dry-initializer'
+gem 'dry-validation'
+
+gem 'rake'
+
+gem 'activesupport', require: false
+gem 'fast_jsonapi'
+gem 'i18n'
+gem 'jwt'
+
+group :development do
+  gem 'byebug'
+  gem 'rubocop', require: false
+  gem 'sinatra-reloader'
+  gem 'sequel-seed'
+end
+
+group :test do
+  gem 'database_cleaner-sequel'
+  gem 'factory_bot'
+  gem 'rack-test'
+  gem 'rspec'
+end
