@@ -8,3 +8,7 @@ ru:
           blank: Укажите название
         description:
           blank: description cannot be empty
+
+  api:
+    errors:
+      unauthorized: Доступ к ресурсу ограничен

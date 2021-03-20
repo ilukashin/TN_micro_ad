@@ -6,3 +6,6 @@ pagination:
   page_size: 10
 app:
   secret: secret
+
+dependencies:
+  auth_service_url: http://localhost:3010/v1/auth
