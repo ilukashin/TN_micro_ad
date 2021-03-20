@@ -3,8 +3,8 @@ ru:
     errors:
       ad:
         city:
-          blank: title translation missing
+          blank: Укажите город
         title:
-          blank: description translation missing
+          blank: Укажите название
         description:
           blank: description cannot be empty
