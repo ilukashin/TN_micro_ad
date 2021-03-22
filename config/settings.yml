@@ -9,3 +9,4 @@ app:
 
 dependencies:
   auth_service_url: http://localhost:3010/v1/auth
+  geocoder_service_url: http://localhost:3011/geocoder
