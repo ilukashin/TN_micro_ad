@@ -11,21 +11,23 @@ RSpec.describe GeocoderService::Client, type: :client do
   end
 
 
-  describe '#get_coordinates valid city' do
-    let(:status) { 200 }
-    let(:body) { [45.05,90.05].to_json  } 
+  # describe '#geocode_later valid city' do
+  #   let(:status) { 200 }
+  #   let(:body) { [45.05,90.05].to_json  } 
+  #   let(:ad) { create(:ad, city: 'invalid.city') }
     
-    it 'returns user id' do
-      expect(subject.get_coordinates('valid.city')).to eq(JSON.parse(body))
-    end
-  end
+  #   it 'returns user id' do
+  #     expect(subject.geocode_later(ad)).to eq(JSON.parse(body))
+  #   end
+  # end
   
-  describe '#get_coordinates invalid city' do
-    let(:status) { 204 }
-    let(:body) { [nil,nil].to_json } 
+  # describe '#geocode_later invalid city' do
+  #   let(:status) { 204 }
+  #   let(:body) { [nil,nil].to_json } 
+  #   let(:ad) { create(:ad, city: 'invalid.city') }
 
-    it 'returns user id' do
-      expect(subject.get_coordinates('invalid.city')).to eq(JSON.parse(body))
-    end
-  end
+  #   it 'returns user id' do
+  #     expect(subject.geocode_later(ad)).to eq(JSON.parse(body))
+  #   end
+  # end
 end
