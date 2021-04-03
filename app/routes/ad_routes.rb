@@ -1,5 +1,5 @@
 class AdRoutes < Application
-  helpers PaginationLinks, Auth, Geocoder
+  helpers PaginationLinks, Auth
 
   namespace '/v1' do
     get do
@@ -15,7 +15,7 @@ class AdRoutes < Application
       ad_params = validate_with!(AdParamsContract)
 
       result = Ads::CreateService.call(
-        ad: ad_params[:ad].merge(geocoder),
+        ad: ad_params[:ad],
         user_id: user_id
       )
 

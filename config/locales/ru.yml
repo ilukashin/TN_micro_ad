@@ -12,3 +12,8 @@ ru:
   api:
     errors:
       unauthorized: Доступ к ресурсу ограничен
+
+  services:
+    ads:
+      update_service:
+        not_found: 'Объявление не найдено'

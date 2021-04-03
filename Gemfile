@@ -14,6 +14,7 @@ gem 'puma'
 
 gem 'pg'
 gem 'sequel'
+gem 'bunny'
 
 gem 'dry-initializer'
 gem 'dry-validation'

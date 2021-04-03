@@ -6,11 +6,10 @@ module Ads
       option :title
       option :description
       option :city
-      option :lat
-      option :lon
     end
 
     option :user_id
+    option :geocoder_service, default: proc { GeocoderService::Client.new }
 
     attr_reader :ad
 
@@ -20,6 +19,7 @@ module Ads
 
       if @ad.valid?
         @ad.save
+        @geocoder_service.geocode_later(@ad)
       else
         fail!(@ad.errors)
       end
