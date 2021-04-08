@@ -8,6 +8,8 @@ gem 'sinatra', require: 'sinatra/base'
 gem 'sinatra-contrib'
 gem 'faraday'
 gem 'faraday_middleware'
+gem 'rack-ougai'
+gem 'rack-request-id'
 
 gem 'config'
 gem 'puma'

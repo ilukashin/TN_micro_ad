@@ -5,6 +5,7 @@ db:
 pagination:
   page_size: 10
 app:
+  name: ads
   secret: secret
 
 dependencies:
@@ -13,4 +14,7 @@ dependencies:
 
 rabbitmq:
   consumer_pool: 10
-  
+
+logger:
+  path: log/app.log
+  level: info
