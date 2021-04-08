@@ -10,6 +10,7 @@ gem 'faraday'
 gem 'faraday_middleware'
 gem 'rack-ougai'
 gem 'rack-request-id'
+gem 'amazing_print'
 
 gem 'config'
 gem 'puma'
