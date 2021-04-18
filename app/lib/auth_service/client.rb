@@ -7,7 +7,7 @@ module AuthService
 
     def initialize
       @channel = RabbitMq.channel
-      @exchange = channel.default_exchange
+      @exchange = @channel.default_exchange
       @server_queue_name = 'auth'
 
       @lock = Mutex.new
@@ -22,7 +22,7 @@ module AuthService
                    correlation_id: @correlation_id,
                    reply_to: @reply_queue.name))
 
-      @lock.synchronize { @condition.wait(lock) }
+      @lock.synchronize { @condition.wait(@lock) }
 
       @response
     end

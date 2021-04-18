@@ -9,6 +9,8 @@ queue.subscribe do |delivery_info, properties, payload|
   
   Ads::UpdateService.call(payload['id'], {lat: lat, lon: lon} )
 
+  Application.logger.info(payload)
+
   exchange.publish(
     '',
     routing_key: properties.reply_to, 
